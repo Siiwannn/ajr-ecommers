@@ -57,4 +57,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# PT ANUGRAH JAYA RETAILINDO 
+
+
+## PT ANUGRAH JAYA RETAILINDO 
+Adalah sebuah Platform e-commerce cms yang di bangun menggunakan laravel +12 blade + liveware
+
+## LOGO 
+<img src="/public/assets/logo.png" alt="logo pt">
