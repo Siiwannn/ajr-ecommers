@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Models\Product;
 
 // Frontend Routes
 Route::get('/', function () {
@@ -11,6 +12,12 @@ Route::get('/', function () {
 Route::get('/product', function () {
     return view('frontend.product');  // ← Halaman product terpisah
 })->name('product');
+
+
+Route::get('/product/{id}', function ($id) {
+    $product = Product::findOrFail($id);
+    return view('frontend.product-detail', compact('product'));
+})->name('product.detail');
 
 Route::get('/about', function () {
     return view('frontend.about');

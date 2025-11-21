@@ -13,40 +13,41 @@
             font-family: Arial, sans-serif;
         }
 
-        /* CENTER WRAPPER */
+        /* WRAPPER */
         .wrapper {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
             flex-direction: column;
-            margin-top: 0;
+            align-items: center;
+            margin-top:5px;
+            padding-top: 60px;
+            min-height: 90vh;
         }
 
-        /* LOGO + TITLE */
-        .top-logo {
-            text-align: center;
-            margin-bottom: 10px;
+        /* LOGO HEADER (kiri + text) */
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-bottom: 0px;
         }
 
-        .top-logo img {
+        .header-logo img {
             height: 40px;
         }
 
-        .company-title {
+        .header-title {
             font-weight: bold;
             font-size: 22px;
-            margin-top: 5px;
         }
 
-        /* LOGIN BOX BORDER */
+        /* LOGIN BOX */
         .login-box {
             width: 420px;
-            border: 6px solid #000;
+            border: 10px solid #000;
             border-radius: 5px;
             padding: 40px;
             text-align: center;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .login-title {
@@ -64,7 +65,7 @@
             margin-bottom: 6px;
         }
 
-        /* INPUT STYLE MIRIP GAMBAR */
+        /* INPUT */
         .input-field {
             width: 100%;
             border: none;
@@ -75,7 +76,7 @@
             font-size: 15px;
         }
 
-        /* BUTTON MIRIP GAMBAR */
+        /* BUTTON */
         .btn-login {
             background: #4d4d4d;
             color: white;
@@ -84,7 +85,6 @@
             border: none;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 10px;
         }
 
         .btn-login:hover {
@@ -97,15 +97,14 @@
 
     <div class="wrapper">
 
-        <!-- LOGO DI ATAS -->
-        <div class="top-logo">
-            <img src="{{ asset('logo.png') }}" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40'">
-            <div class="company-title">PT. ANUGRAH JAYA RETAILINDO</div>
+        <!-- HEADER LOGO SEJAJAR KIRI -->
+        <div class="header-logo">
+            <img src="{{ asset('/assets/logo.png') }}" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40'">
+            <div class="header-title">PT. ANUGRAH JAYA RETAILINDO</div>
         </div>
 
         <!-- LOGIN BOX -->
         <div class="login-box">
-
             <div class="login-title">Log In</div>
 
             @if ($errors->any())
@@ -125,7 +124,6 @@
 
                 <button type="submit" class="btn-login">Masuk</button>
             </form>
-
         </div>
 
     </div>
